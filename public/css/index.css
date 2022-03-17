@@ -1,0 +1,52 @@
+h1{
+    margin-top: 5%;
+    margin-left: 3%;
+}
+.awardsContainer{
+    margin: 5% 9%;
+}
+.awardsDescription h3{
+    font-size: 18px;
+}
+.awardsDescription {
+    padding: 20px 5px;
+}
+.awardsDescription p{
+    font-size: 16px;
+}
+.awardDescription{
+    display: none;
+}
+.mainPic{
+    width: 100%;
+}
+
+.images{
+    width: 95%;
+    margin:auto;
+    box-shadow: 0px 0px 15px 2px grey;
+}
+
+@media (min-width: 764px){       
+    article{
+        display: flex;
+        padding:15px;
+        border: 1px solid black;
+    }
+    .impar{
+        flex-direction: row-reverse;
+    }
+    .awardDescription{
+        display: block;
+    }
+    .awardsDescription{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 17px 18px;
+    }
+    
+    .awardsDescription h3{
+        width: 100%;
+    }
+}

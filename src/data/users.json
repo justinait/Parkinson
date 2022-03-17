@@ -1,0 +1,37 @@
+[
+  {
+    "id": 2,
+    "email": "vituiturraspe@gmail.com",
+    "password": "vitucapa"
+  },
+  {
+    "name": "justina",
+    "email": "jajaja@peteju.com",
+    "password": "ponesmultipartantesdemulteryterompolajeta",
+    "id": 4
+  },
+  {
+    "name": "la mona",
+    "email": "lamonagimenez@gmail.com",
+    "password": "$2a$12$Dw7OsGDc2zs/21EbZn44f.4.Ismau6kJs2uxBsMqLIJCYsAUje75y",
+    "id": 5
+  },
+  {
+    "name": "justina",
+    "email": "justiiturraspe@gmail.com",
+    "password": "$2a$12$EmKi6MLn9AEOF9OIrSyyhev/C1H.KI78Q9GuwFWb31f5wLS84.g4S",
+    "id": 6
+  },
+  {
+    "name": "pacu",
+    "email": "pacu@itu.com",
+    "password": "$2a$12$.3S2Uk9hjj4Mypd9E5EyhOgjq/jIEWCAGe6LAcs2F1kacsLaRNIqq",
+    "id": 8
+  },
+  {
+    "name": "nano",
+    "email": "nano@itu.com",
+    "password": "$2a$12$sefKjW1B7Kbp2smvkhF33OAmavTGPLHkApN7BhHtqy2FEHtoEHchu",
+    "id": 9
+  }
+]

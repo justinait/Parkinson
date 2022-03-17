@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head') %>
+    <title>Jorgelina Parkinson</title>
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+      <header>
+        <%- include('partials/header') %>   
+      </header>
+  
+      <main>
+
+          <img src="/images/paintings/landscape/puenteColgante.jpg" alt="Puente Colgante" class="mainPic">
+  
+          <h1>PREMIOS</h1>
+
+          <div class="awardsContainer">          
+          <% prizes.forEach(e => { %>
+            <% var acum = 0 %> 
+            <article class="<%= prizes.indexOf(e)%2 == 0 ? "" : "impar" %>  ">
+              <a href="/gallery/<%= e.id %> "><img src=" <%=e.mainImage%> " alt="<%=e.title %>" class="images"></a>
+
+              <div class="awardsDescription">
+                <h3><%=e.title %></h3>
+                <p>1er premio Santa fe</p>
+                <p><%=e.width %>x<%=e.high %></p>
+                <p class="awardDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus possimus excepturi vel quae sint veniam vero, iusto ducimus sed, odit voluptas quo exercitationem earum, facere sapiente hic similique velit nesciunt!</p>
+              </div>
+              <% acum++ %> 
+            </article>
+            
+          <%}); %> 
+          </div>
+
+        </main>
+
+        
+      <footer>
+        <%- include('partials/footer') %> 
+      </footer>
+  </body>
+</html>

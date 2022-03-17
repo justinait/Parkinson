@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/gallery.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %> 
+    </header>
+    <main>
+        <h1>Mis cuadros</h1>
+    
+        <div class="container">
+            <% paintings.forEach(e => { %>  
+                <article class="painting">
+                    <a href="/gallery/<%= e.id %> "><img src=" <%=e.mainImage %> " alt="<%=e.title %>" class="images"></a>
+                    <div class="description">
+                      <h3><%=e.title %></h3>
+                      <p><%=e.width %>x<%=e.high %></p>
+                    </div>        
+                </article>
+                <div class="buttons">
+                    <form class="button" action="/gallery/<%= e.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Eliminar</button>
+                    </form>
+                    <button class="button">
+                        <a href="/gallery/<%= e.id %>/edit">Editar</a>    
+                    </button>
+                </div>
+            <%}); %> 
+        </div>
+
+        <button>
+            <a href="/gallery/create">Nuevo cuadro</a> 
+        </button>
+    </main>
+    
+    <footer>
+        <%- include('../partials/footer') %> 
+    </footer>
+
+</body>
+</html>

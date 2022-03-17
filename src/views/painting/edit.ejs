@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') -%> 
+      <title>Jorgelina Parkinson - Editar</title>
+      <link rel="stylesheet" href="/css/createEditLoginRegister.css">
+    </head>
+
+    <body>      
+        <header>
+            <%- include('../partials/header') %>         
+        </header>
+        <main>        
+            <div class="container">
+                <h2>Editar obra de arrrrrrrrrrte</h2>
+
+                <form class="createForm" action="/gallery/<%=painting.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <br>
+                    <div class="formControl">
+                        <label>Titulo</label>
+                        <input type="text" name="title" class="control" value="<%=painting.title%>">
+                    </div>
+                    <div class="formControl">
+                        <label>Altura en cm</label>
+                        <input type="tel" name="high" class="control" value="<%=painting.high%>"> 
+                    </div>
+                    <div class="formControl">
+                        <label>Ancho en cm</label>
+                        <input type="tel" name="width" class="control" value="<%=painting.width%>">
+                    </div>
+                    <div class="formControl">
+                        <label>Categoria</label>
+                        <input type="text" name="category" class="control" value="<%=painting.category%>">
+                    </div>
+                    <div class="formControl">
+                        <label>Imagen principal</label>
+                        <input type="file" name="mainImage" accept = ".jpg, .png" class="control" >
+                        <img src="<%=painting.mainImage%> " width="150" alt="">
+                    </div>
+                    <div class="formControl">
+                        <label>Imagenes extra</label>
+                        <input type="file" name="images" accept = ".jpg, .png" class="control " multiple >
+                    </div>
+                    <div class="formControl">
+                        <label>Precio</label>
+                        <input type="tel" name="price" class="control" value="<%= painting.price%>">
+                    </div>
+                    <div  class="formControl">
+                        <label for="">Es parte de una serie?</label>
+                        <input type="radio" name="serie" value="si" <%= painting.serie == "si"? 'checked': '' %> />Si
+                        <input type="radio" name="serie" value="no" <%= painting.serie == 'no'? 'checked': '' %> />No
+                    </div>
+                    <div class="formControl">
+                        <label>Nombre de la serie</label>
+                        <input type="text" name="serieName" class="control"  value="<%=painting.serieName%>">
+
+                    </div>
+                
+                    <button type="submit" class="formButton">Guardar cambios</button>
+                    <a href="gallery/<%=painting.id%>">Cancelar</a>
+                </form>
+            </div>
+
+    </main>
+
+    <footer>
+        <%- include('../partials/footer') %>         
+    </footer>
+</body>
+
+</html>

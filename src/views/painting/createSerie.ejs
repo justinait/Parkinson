@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head') %> 
+    <title>Nueva serie</title>
+    <link rel="stylesheet" href="/css/createEditLoginRegister.css">
+</head>
+<body>      
+    <div  class="backButton"><a href="/"><i class="fas fa-arrow-left"></i>    Home</a></div>
+
+    <main>        
+        <div class="container">
+        <h2>Nueva serie</h2>
+            <form class="createForm" action="/users" method="POST">
+                <br>
+                <div class="formControl">
+                    <label>Nombre de la serie NUEVA</label>
+                    <input type="text" name="serieName" class="control">
+                </div>
+                
+
+
+                <div class="seriePart">
+
+                    <div class="formControl">
+                        <label>Titulo</label>
+                        <input type="text" name="title" class="control" required>
+                    </div>
+                    <div class="formControl">
+                        <label>Altura en cm</label>
+                        <input type="tel" name="high" class="control" required>
+                    </div>
+                    <div class="formControl">
+                        <label>Ancho en cm</label>
+                        <input type="tel" name="width" class="control" required>
+                    </div>
+                    <div class="formControl">
+                        <label>Categoria</label>
+                        <input type="text" name="category" class="control" required>
+                    </div>
+                    <div class="formControl">
+                        <label>Imagen principal</label>
+                        <input type="file" name="mainImage" accept = ".jpg, .png" class="control " required >
+                    </div>
+                    <div class="formControl">
+                        <label>Imagen</label>
+                        <input type="file" name="images" accept = ".jpg, .png" class="control " multiple >
+                    </div>
+                    <div class="formControl">
+                        <label>Precio</label>
+                        <input type="tel" name="price" class="control">
+                    </div>
+                
+                </div>
+                <button type="submit" class="formButton">Crear producto</button>
+            </form>
+        </div>
+
+    </main>
+</body>
+</html>

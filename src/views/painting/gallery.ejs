@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/gallery.css">
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %> 
+    </header>
+
+    <h1>Mis cuadros</h1>
+    
+    <div class="container">
+        <% paintings.forEach(e => { %>  
+            <article class="painting">
+                <a href="/gallery/<%= e.id %> "><img src=" <%=e.mainImage %> " alt="<%=e.title %>" class="images"></a>
+                <div class="description">
+                  <h3><%=e.title %></h3>
+                  <p><%=e.width %>x<%=e.high %></p>
+                </div>        
+            </article>
+            
+        <%}); %> 
+    </div>
+
+    <footer>
+        <%- include('../partials/footer') %> 
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head') -%> 
+      <title>Jorgelina Parkinson</title>
+      <link rel="stylesheet" href="/css/createEditLoginRegister.css">
+    </head>
+
+    <body>      
+        <header>
+            <%- include('../partials/header') %>         
+        </header>
+        <main>        
+            <div class="container">
+                <h2>Nueva obra de arrrrrrrrrrte</h2>
+                <form class="createForm" action="/gallery/create" method="POST" enctype="multipart/form-data">
+                    <br>
+                    <div class="formControl">
+                        <label>Titulo</label>
+                        <input type="text" name="title" class="control" value="<%= locals.oldValues && oldValues.title %>">
+                        <% if (locals.errors && errors.title) { %>
+                            <p><%= errors.title.msg %> </p>
+                        <% } %>
+                    </div>
+                    <div class="formControl">
+                        <label>Altura en cm</label>
+                        <input type="tel" name="high" class="control" value="<%= locals.oldValues && oldValues.high %>">
+                        <% if (locals.errors && errors.high) { %>
+                            <p><%= errors.high.msg %> </p>
+                        <% } %>
+                    </div>
+                    <div class="formControl">
+                        <label>Ancho en cm</label>
+                        <input type="tel" name="width" class="control" value="<%= locals.oldValues && oldValues.width %>">
+                        <p><%= locals.errors && errors.width ? errors.width.msg : '' %> </p>
+                    </div>
+                    <div class="formControl">
+                        <label>Categoria</label>
+                        <select name="category" class="control" >
+                            <option value="landscape" <%= (locals.oldValues && oldValues.category)== 'landscape'? 'selected' : '' %>  >Paisaje</option>
+                            <option value="humanFigure" <%= (locals.oldValues && oldValues.category)== 'humanFigure'? 'selected' : '' %>>Figura Humana</option>
+                            <option value="stillLife" <%= (locals.oldValues && oldValues.category)== 'stillLife'? 'selected' : '' %>>Naturaleza muerta</option>
+                            <option value="sacrum" <%= (locals.oldValues && oldValues.category)== 'sacrum'? 'selected' : '' %>>Arte sacro</option>
+                        </select>
+                    </div>
+                    <div class="formControl">
+                        <label>Imagen principal</label>
+                        <input type="file" name="mainImage"  class="control" >
+                        <% if (locals.errors && errors.mainImage) { %>
+                            <p><%= errors.mainImage.msg %> </p>
+                        <% } %>
+                    </div>
+                    <div class="formControl">
+                        <label>Imagenes extra</label>
+                        <input type="file" name="images"  class="control " multiple >
+                    </div>
+                    <div class="formControl">
+                        <label>Precio</label>
+                        <input type="tel" name="price" class="control">
+                    </div>
+                    <div  class="formControl">
+                        <label for="">Es parte de una serie?</label>
+                        <input type="radio" name="serie" value="si" <%= (locals.oldValues && (oldValues.serie == 'si')) ? 'checked': '' %>  />Si
+                        <input type="radio" name="serie" value="no" <%= (locals.oldValues && oldValues.serie == 'no') ? 'checked': '' %>/>No
+                    </div>
+                    <div class="formControl">
+                        <label>Nombre de la serie</label>
+                        <input type="text" name="serieName" class="control">
+                    </div>
+                    <button type="submit" class="formButton">Crear producto</button>
+                    <a href="/createSerie">Crear una serie completa</a>
+                </form>
+            </div>
+
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>         
+    </footer>
+</body>
+
+</html>

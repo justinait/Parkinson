@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+}
+
+body{
+    min-width: 290px;
+    background-color: #9e9e9e;
+}
+
+img{
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+h2{
+    margin-top: 20px;
+    margin-bottom: 16px;
+    font-size: 21px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    text-align: left;
+    padding: 5px;
+}
+
+.errors{
+    color:red;
+    text-align: left;
+}
+
+.backButton a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.texts{
+    text-align: right;
+    margin-top: 7px;
+}
+
+.container{
+    margin: auto;
+    margin-top:70px;
+    text-align: center;
+    background-color: #e3e4e5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius:3%;
+    width: 80vw;
+}
+
+
+.createForm{
+    padding:20px 20px;
+}
+
+.formControl{
+    margin-bottom: 10px;
+}
+
+.formControl label{
+    display: block;
+}
+
+.control{
+    width:100%;
+    padding:8px 8px;
+    border-radius: 5px;
+}
+
+.formButton{
+    background-color: #9e9e9e;
+    border: none;
+    color: black;
+    padding: 10px 10px;
+    font-size:18px;
+    border-radius: 5px;
+    width: 140px;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.formButton:hover{
+    background-color: #636867;
+}
+
+@media (min-width: 361px){
+    h2{
+        margin-top: 40px;  
+      }
+    form label{
+        padding: 2px;
+        font-weight: bold;
+    }
+    .container{
+        width: 70vw;
+        margin-top:60px;
+    }
+    .createForm{
+        padding: 15px 35px;
+    }
+    .formButton{
+        width: 160px;
+    }
+}
+@media (min-width: 769px){
+    body{
+        background-image:url("/images/paintings/landscape/puenteColgante.jpg");
+    }
+    .createForm{
+        padding: 10px 80px;
+    }
+    .container{
+        width: 40vw;
+        background-color: #e3e4e5;
+    }
+    .formButton{
+        width: 200px;
+    }
+}

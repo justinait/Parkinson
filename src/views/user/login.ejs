@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head') %>
+    <title>Jorgelina Parkinson - LOGIN</title>
+    <link rel="stylesheet" href="/css/createEditLoginRegister.css">
+</head>
+<body>
+    <header>
+        <%-include('../partials/header') %>
+    </header>
+
+    <div class="container">
+
+        <h2>Iniciar sesion</h2>
+
+        <form class="createForm" action="/users/login" method="POST">
+            
+            <div class="formControl">
+                <label>Correo electrónico</label>
+                <input type="email" name="email" class="control"  value="<%= locals.oldValues && oldValues.email %>">
+                <% if(locals.errors && errors.email){ %> 
+                    <p class="errors"><%=errors.email.msg  %> </p>
+                <% } %> 
+            </div>
+            <div class="formControl">
+                <label>Contraseña</label>
+                <input type="password" name="password" class="control">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errors"><%= errors.password.msg %> </p>
+                <% } %>
+            </div>
+            <div class="input-container">
+                <input type="checkbox" name="remember" id="remember" value="yes" <%= (locals.oldValues && oldValues.remember === 'yes') ? 'checked' : '' %>/> Recordar usuario
+            </div>
+            
+            <button type="submit" class="formButton">Inicia sesion</button>
+            <div class="texts">No tienes cuenta?<a href="/users/register"> Registrarse</a></div>
+        </form>
+
+    </div>
+    
+    <%-include('../partials/footer') %>
+</body>
+</html>

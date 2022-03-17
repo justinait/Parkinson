@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %> 
+    <title>detalle </title>
+    <link rel="stylesheet" href="/css/detail.css">
+</head>
+<body>
+    <header>
+        <%-include('../partials/header') %> 
+    </header>
+    <main>
+        <div class="container">
+            <h1>         <%= paintingDetail.title %>        </h1>
+            <img src="<%= paintingDetail.mainImage %> " alt="<%= paintingDetail.title %> " class = "mainImage">
+            
+            <p class="size"><%= paintingDetail.high %> x <%= paintingDetail.width %>    </p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+
+            
+        </div>
+        <div class="buttons">
+            <% if (locals.logged) { %>   
+                <form class="button" action="/gallery/<%= paintingDetail.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Eliminar</button>
+                </form>
+                <button class="button">
+                    <a href="/gallery/<%= paintingDetail.id %>/edit">Editar</a>    
+                </button>
+            <% } %>
+        </div>
+                
+    </main>
+    
+    <footer>
+        <%-include('../partials/footer') %> 
+    </footer>
+
+</body>
+</html>

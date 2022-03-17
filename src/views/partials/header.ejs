@@ -1,0 +1,28 @@
+<div class="header">
+
+    <div class="mobileHeader">
+        <span class="logo"> <a href="/"> JORGELINA PARKINSON</a></span>
+        <i class="fas fa-bars" id="burgerMenu">
+        </i>
+    </div>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="" class="gallery">Galeria</a>
+        <div class="galleryOptions">
+            <a href="/gallery/paintings/landscape">Paisajes</a>
+            <a href="/gallery/paintings/humanFigure">Figura humana</a>
+            <a href="/gallery/paintings/stillLife">Naturaleza muerta</a>
+            <a href="/gallery/paintings/sacrum">Arte sacro</a>
+            <a href="/gallery/paintings">Todos</a>
+        </div>
+        <!--    <a href="/gallery/series">Series</a>  -->
+        <a href="/users/about">About</a>
+        <% if (locals.logged) { %> 
+            <%- include('./auth')  %> 
+        <% } else{ %> 
+            <%- include('./guest')  %> 
+        <% } %> 
+        
+    </div>
+    
+</div>
