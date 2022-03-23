@@ -33,5 +33,11 @@
     "email": "nano@itu.com",
     "password": "$2a$12$sefKjW1B7Kbp2smvkhF33OAmavTGPLHkApN7BhHtqy2FEHtoEHchu",
     "id": 9
+  },
+  {
+    "name": "jorgelina",
+    "email": "jorgelinaparkinson@gmail.com",
+    "password": "$2a$12$1BrPMPxrLCKXbiQgdhqgXO0wt4zdHof9KTeHoLAwzu91viXsaGspK",
+    "id": 10
   }
 ]
